@@ -1,17 +1,22 @@
+import { useColorMode } from "@kobalte/core";
 import { useLocation } from "@solidjs/router";
+import { buttonVariants } from "~/components/ui/button";
+import { cn } from "~/lib/utils";
 
 export default function Nav() {
   const location = useLocation();
-  const active = (path: string) =>
-    path == location.pathname ? "border-sky-600" : "border-transparent hover:border-sky-600";
+  function active(path: string) {
+    return (location.pathname === path) && 'underline';
+  }
+
   return (
-    <nav class="bg-sky-800">
-      <ul class="container flex items-center p-3 text-gray-200">
-        <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
-          <a href="/">Home</a>
+    <nav class="bg-primary">
+      <ul class="container flex gap-4 items-center p-3">
+        <li>
+          <a href="/" class={cn(buttonVariants({variant: "link", size: 'lg'}), "text-primary-foreground", active('/'))}>Home</a>
         </li>
-        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-          <a href="/about">About</a>
+        <li>
+          <a href="/about" class={cn(buttonVariants({variant: "link", size: 'lg'}), "text-primary-foreground", active('/about'))}>About</a>
         </li>
       </ul>
     </nav>
