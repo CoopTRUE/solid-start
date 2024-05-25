@@ -3,6 +3,7 @@ import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 import Nav from "~/components/Nav";
 import "./app.css";
+import "@fontsource/inter"
 
 export default function App() {
   return (
