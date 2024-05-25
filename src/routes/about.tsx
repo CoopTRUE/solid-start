@@ -1,4 +1,4 @@
-import Counter from "~/components/Counter";
+import Counter from '~/components/Counter'
 
 export default function About() {
   return (
@@ -6,5 +6,5 @@ export default function About() {
       <h1 class="text-7xl">About</h1>
       <Counter />
     </main>
-  );
+  )
 }
