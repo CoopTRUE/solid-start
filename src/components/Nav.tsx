@@ -13,24 +13,24 @@ export default function Nav() {
       <ul class="container flex items-center gap-4 p-3">
         <li>
           <a
-            href="/"
             class={cn(
               buttonVariants({ variant: 'link', size: 'lg' }),
               'text-primary-foreground',
               active('/')
             )}
+            href="/"
           >
             Home
           </a>
         </li>
         <li>
           <a
-            href="/about"
             class={cn(
               buttonVariants({ variant: 'link', size: 'lg' }),
               'text-primary-foreground',
               active('/about')
             )}
+            href="/about"
           >
             About
           </a>
