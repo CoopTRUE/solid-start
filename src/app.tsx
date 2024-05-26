@@ -20,8 +20,8 @@ export default function App() {
     <Router
       root={(props) => (
         <>
-          <ColorModeScript initialColorMode="light" storageType={storageManager.type} />
-          <ColorModeProvider initialColorMode="light" storageManager={storageManager}>
+          <ColorModeScript initialColorMode="dark" storageType={storageManager.type} />
+          <ColorModeProvider initialColorMode="dark" storageManager={storageManager}>
             <div class="flex min-h-screen flex-col">
               <Nav />
               <div class="flex flex-1">
