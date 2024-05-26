@@ -1,32 +1,34 @@
-# SolidStart
+# SolidStart Starter
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+[![License](https://img.shields.io/github/license/cooptrue/solid-start)](https://github.com/CoopTRUE/solid-start/blob/main/LICENSE)
 
-## Creating a project
+A blazing fast, lightweight, and flexible Solid.js starter template. Includes `TypeScript`, `ESLint`, `Prettier`, `shadcn/ui`, and `Tailwind CSS`. Plus, _auto formatting on save_.
+
+**Next.js-like syntax without the server component nonsense. Full SSR btw.**
+
+## Installing
 
 ```bash
-# create a new project in the current directory
-npm init solid@latest
-
-# create a new project in my-app
-npm init solid@latest my-app
+# I like using bun but you can use any package manager
+bun install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun run dev
 ```
 
 ## Building
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+_Easiest and fastest build of your life._
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+```bash
+bun run build
+```
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+## Production
+
+```bash
+bun run start
+```
