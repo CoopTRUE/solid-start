@@ -1,17 +1,12 @@
-import { Router } from '@solidjs/router'
-import { FileRoutes } from '@solidjs/start/router'
-import { Suspense } from 'solid-js'
-import Nav from '~/components/Nav'
 import './app.css'
 import '@fontsource/inter'
-import {
-  ColorModeProvider,
-  ColorModeScript,
-  cookieStorageManagerSSR,
-  useColorMode,
-} from '@kobalte/core'
-import { getCookie } from 'vinxi/http'
+import { ColorModeProvider, ColorModeScript, cookieStorageManagerSSR } from '@kobalte/core'
+import { Router } from '@solidjs/router'
+import { FileRoutes } from '@solidjs/start/router'
+import Nav from '~/components/Nav'
+import { Suspense } from 'solid-js'
 import { isServer } from 'solid-js/web'
+import { getCookie } from 'vinxi/http'
 
 function getServerCookies() {
   'use server'
@@ -27,9 +22,9 @@ export default function App() {
         <>
           <ColorModeScript storageType={storageManager.type} initialColorMode="light" />
           <ColorModeProvider storageManager={storageManager} initialColorMode="light">
-            <div class="min-h-screen flex flex-col">
+            <div class="flex min-h-screen flex-col">
               <Nav />
-              <div class="flex-1 flex">
+              <div class="flex flex-1">
                 <Suspense>{props.children}</Suspense>
               </div>
             </div>

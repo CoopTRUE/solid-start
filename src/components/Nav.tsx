@@ -1,4 +1,3 @@
-import { useColorMode } from '@kobalte/core'
 import { useLocation } from '@solidjs/router'
 import { buttonVariants } from '~/components/ui/button'
 import { cn } from '~/lib/utils'
@@ -11,7 +10,7 @@ export default function Nav() {
 
   return (
     <nav class="bg-primary">
-      <ul class="container flex gap-4 items-center p-3">
+      <ul class="container flex items-center gap-4 p-3">
         <li>
           <a
             href="/"
